@@ -19,10 +19,10 @@ Exercícios de Lógica de Programação
 5. Tabuada
    Leia um número inteiro e exiba a tabuada dele de 1 até 10.
 
-      Exemplo para número 5:
-      5 x 1 = 5
-      5 x 2 = 10
-      ...
+       - Exemplo para número 5:
+       - 5 x 1 = 5
+       - 5 x 2 = 10
+       - ...
 
 6. Contador de Números Positivos
    Leia 10 números e informe quantos deles são positivos.
