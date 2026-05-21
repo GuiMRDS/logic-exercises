@@ -20,33 +20,31 @@ Exercícios de Lógica de Programação
    Leia um número inteiro e exiba a tabuada dele de 1 até 10.
 
 Exemplo para número 5:
-
 5 x 1 = 5
 5 x 2 = 10
-... 6. Contador de Números Positivos
+...
 
-Leia 10 números e informe quantos deles são positivos.
+6. Contador de Números Positivos
+   Leia 10 números e informe quantos deles são positivos.
 
 7. Média de Notas
    Leia 4 notas de um aluno, calcule a média e informe:
+   - “Aprovado” se a média for maior ou igual a 7
+   - “Recuperação” se a média for entre 5 e 6.9
+   - “Reprovado” se for menor que 5 8. Maior Número Digitado
 
-“Aprovado” se a média for maior ou igual a 7
-“Recuperação” se a média for entre 5 e 6.9
-“Reprovado” se for menor que 5 8. Maior Número Digitado
-
-Leia 7 números inteiros e mostre o maior valor informado.
+8. Maior Número Digitado
+   Leia 7 números inteiros e mostre o maior valor informado.
 
 9. Sequência Crescente
-
-Leia um número inteiro positivo N e exiba todos os números de 1 até N.
+   Leia um número inteiro positivo N e exiba todos os números de 1 até N.
 
 10. Senha Correta
-
-Peça uma senha ao usuário repetidamente até que ele digite a senha correta.
+    Peça uma senha ao usuário repetidamente até que ele digite a senha correta.
 
 Quando acertar, exiba:
-
 Acesso permitido
+
 O que esses exercícios treinam
 Exercício Conceito
 1 if/else
