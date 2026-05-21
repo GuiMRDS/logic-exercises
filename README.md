@@ -19,10 +19,10 @@ Exercícios de Lógica de Programação
 5. Tabuada
    Leia um número inteiro e exiba a tabuada dele de 1 até 10.
 
-Exemplo para número 5:
-5 x 1 = 5
-5 x 2 = 10
-...
+      Exemplo para número 5:
+      5 x 1 = 5
+      5 x 2 = 10
+      ...
 
 6. Contador de Números Positivos
    Leia 10 números e informe quantos deles são positivos.
@@ -41,23 +41,22 @@ Exemplo para número 5:
 
 10. Senha Correta
     Peça uma senha ao usuário repetidamente até que ele digite a senha correta.
-
-Quando acertar, exiba:
-Acesso permitido
+      Quando acertar, exiba:
+      Acesso permitido
 
 O que esses exercícios treinam
 Exercício Conceito
-1 if/else
-2 comparação
-3 loop
-4 acumulação
-5 repetição
-6 contador
-7 condição composta
-8 maior valor
-9 loops com limite
-10 repetição com condição
-Ordem ideal para resolver
+   1 if/else
+   2 comparação
+   3 loop
+   4 acumulação
+   5 repetição
+   6 contador
+   7 condição composta
+   8 maior valor
+   9 loops com limite
+   10 repetição com condição
+   Ordem ideal para resolver
 
 Faça nessa sequência:
 
