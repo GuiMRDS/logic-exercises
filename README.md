@@ -1,5 +1,6 @@
 # logic-exercises
 
+## Execicios basicos.
 Repositório para treinar logica e estrutura de dados
 
 Exercícios de Lógica de Programação
@@ -63,3 +64,68 @@ Faça nessa sequência:
 1 → 3 → 4 → 9 → 5 → 6 → 2 → 8 → 7 → 10
 
 Porque a dificuldade aumenta gradualmente.
+
+
+## Execicios interdiarios.
+1. Sistema de Login
+Peça ao usuário uma senha. Enquanto a senha estiver incorreta, continue pedindo novamente. Quando acertar, exiba “Acesso permitido”.
+
+2. Maior e Menor Número
+Peça 10 números ao usuário e informe:
+ - o maior número digitado
+ - o menor número digitado
+ - 
+3. Média da Turma
+Peça a quantidade de alunos de uma turma. Depois, solicite as notas de cada aluno e calcule:
+ - média geral da turma
+ - quantidade de alunos aprovados
+ - quantidade de alunos reprovados
+Considere aprovação com média maior ou igual a 7.
+
+4. Contagem de Números Pares e Ímpares
+Peça 20 números ao usuário e informe:
+ - quantos são pares
+ - quantos são ímpares
+
+5. Tabuada Completa
+Peça um número ao usuário e exiba sua tabuada do 1 ao 10. Depois pergunte se ele deseja calcular outra tabuada. O programa deve continuar até o usuário decidir sair.
+
+6. Soma dos Positivos
+Peça vários números ao usuário até que ele digite 0. Ao final, mostre:
+ - soma dos números positivos
+ - soma dos números negativos
+quantidade total de números digitados
+
+7. Verificador de Números Primos
+Peça um número inteiro positivo e informe se ele é primo ou não.
+
+8. Caixa Eletrônico
+
+Peça um valor inteiro para saque e informe a quantidade mínima de cédulas necessárias utilizando:
+   100
+   50
+   20
+   10
+   5
+   2
+   1
+
+9. Sistema de Votação
+Peça o número total de eleitores. Depois permita que cada pessoa vote em:
+ - candidato 1
+ - candidato 2
+ - candidato 3
+ - voto branco
+ - voto nulo
+Ao final, exiba:
+ - total de votos de cada candidato
+ - vencedor
+ - quantidade de votos brancos e nulos
+
+10. Análise de Temperaturas
+Peça ao usuário temperaturas de vários dias até que ele digite um valor de parada definido por você.
+Depois informe:
+ - maior temperatura
+ - menor temperatura
+ - média das temperaturas
+ - quantidade de dias acima da média
