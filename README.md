@@ -128,3 +128,142 @@ Porque a dificuldade aumenta gradualmente.
     - menor temperatura
     - média das temperaturas
     - quantidade de dias acima da média
+
+
+## Logica e estrutura de dados
+
+1. Números Pares em Intervalo
+
+Dado um número inteiro N, exiba todos os números pares entre 1 e N (inclusive).
+
+Exemplo
+
+Entrada:
+10
+
+Saída:
+2 4 6 8 10
+
+2. Soma dos Dígitos
+
+Dado um número inteiro positivo, calcule a soma de todos os seus dígitos.
+
+Exemplo
+
+Entrada:
+583
+
+Saída:
+16
+
+Explicação:
+5 + 8 + 3 = 16
+
+3. Verificador de Número Primo
+
+Dado um número inteiro N, determine se ele é primo.
+
+Um número primo é divisível apenas por 1 e por ele mesmo.
+
+Exemplo
+
+Entrada:
+13
+
+Saída:
+Primo
+
+4. Contagem de Vogais
+
+Dada uma string contendo apenas letras minúsculas, conte quantas vogais existem nela.
+
+Exemplo
+
+Entrada:
+programacao
+
+Saída:
+5
+
+5. Maior Número da Lista
+
+Dada uma lista de números inteiros, encontre o maior valor presente nela.
+
+Exemplo
+
+Entrada:
+[3, 7, 2, 15, 9]
+
+Saída:
+15
+
+6. Inversão de String
+
+Dada uma string, retorne a mesma string invertida.
+
+Exemplo
+
+Entrada:
+estrutura
+
+Saída:
+aruturtse
+
+7. FizzBuzz
+
+Dado um número inteiro N, percorra os números de 1 até N seguindo as regras:
+
+Se o número for divisível por 3, exiba Fizz
+Se for divisível por 5, exiba Buzz
+Se for divisível por ambos, exiba FizzBuzz
+Caso contrário, exiba o próprio número
+Exemplo
+
+Entrada:
+15
+
+Saída:
+1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz
+
+8. Remover Valores Duplicados
+
+Dada uma lista de números inteiros, remova os valores duplicados mantendo apenas a primeira ocorrência de cada elemento.
+
+Exemplo
+
+Entrada:
+[1, 2, 2, 3, 4, 4, 5]
+
+Saída:
+[1, 2, 3, 4, 5]
+
+9. Contagem de Frequência
+
+Dada uma lista de números inteiros, conte quantas vezes cada número aparece.
+
+Exemplo
+
+Entrada:
+[1, 2, 2, 3, 1, 1, 4]
+
+Saída:
+1 -> 3
+2 -> 2
+3 -> 1
+4 -> 1
+
+10. Sequência de Fibonacci
+
+Dado um número inteiro N, gere os N primeiros termos da sequência de Fibonacci.
+
+A sequência começa com:
+
+0, 1, 1, 2, 3, 5, 8...
+
+Exemplo
+
+Entrada:
+7
+
+Saída:
+0 1 1 2 3 5 8
