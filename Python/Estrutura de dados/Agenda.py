@@ -69,8 +69,24 @@ def  imprimir_menu():
     print(' 3 - Incluir contatos na Agenda ')
     print(' 4 - Editar contatos na Agenda ')
     print(' 5 - Excluir contatos na Agenda ')
+    print(' 6 - Exportar contatos na Agenda ')
     print(' 0 - Sair da Agenda ')
     print('-------------------------------------')
+
+
+def exportar_contatos():
+    try:
+        with open('agenda.txt', 'w') as file:
+            for contato in AGENDA:
+                telefone = AGENDA[contato]["telefone"]
+                email = AGENDA[contato]['email']
+                endereco = AGENDA[contato]['endereco']
+                file.write("{};{};{};{}\n".format(contato, telefone, email, endereco))
+        print('>>>>>>>>>>>> Agenda exporado com sucesso =) ')
+    except Exception as error:
+        print('>>>>>>>>>>>> Erro ao exportar contatos')
+        print(error)
+
 
 
 while True:
@@ -91,7 +107,6 @@ while True:
         contato = input("Digite o nome do contato: ")
 
         try:
-            AGENDA[contato]
             print('>>>>>>>>>>>> Contato já existente!')
         except KeyError:
             incluirEditarContatos(contato)
@@ -102,7 +117,6 @@ while True:
         incluirEditarContatos(contato)
 
         try:
-            AGENDA[contato]
             print('>>>>>>>>>>>> Edidando contato: ', contato)
 
         except KeyError:
@@ -112,6 +126,10 @@ while True:
         print()
         contato = input("Digite o nome do contato: ")
         excluirContato(contato)
+
+    elif opcao == '6':
+        print()
+        exportar_contatos()
 
     elif opcao == '0':
         print('Saindo do programa')
