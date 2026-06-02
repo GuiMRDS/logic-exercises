@@ -43,3 +43,5 @@ class PokemonPlata(Pokemon):
 
     def atacar(self, pokemon):
         print("{} atacou um folhas no {}!".format(self, pokemon))
+
+
