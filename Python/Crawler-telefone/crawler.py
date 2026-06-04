@@ -1,4 +1,5 @@
 import requests
+from bs4 import BeautifulSoup
 
 URL = "https://django-anuncios.solyd.com.br/"
 
@@ -14,4 +15,15 @@ def buscar(url):
         print(error)
 
 
-buscar(URL)
+def parsing(resposta_html):
+    try:
+        soup = BeautifulSoup(resposta_html, 'html.parser')
+        return soup
+    except Exception as error:
+        print("Erro ao fazer o parsing HTML")
+        print(error)
+
+
+resposta = buscar(URL)
+if resposta:
+    soup = parsing(resposta)
