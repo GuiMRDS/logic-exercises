@@ -35,6 +35,17 @@ def encontrar_links(texto):
     return links
 
 
+def encontrar_telefones(link):
+    try:
+        respota = requests.get(link)
+        if respota.status_code == 200:
+            print(respota.text)
+        else:
+            print("Erro ao fazer requisição")
+    except Exception as error:
+        print("Erro ao fazer requisição")
+        print(error)
+
 
 resposta = buscar(URL)
 if resposta:
