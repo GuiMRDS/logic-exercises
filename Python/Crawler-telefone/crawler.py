@@ -23,7 +23,22 @@ def parsing(resposta_html):
         print("Erro ao fazer o parsing HTML")
         print(error)
 
+def encontrar_links(texto):
+    cards_pai = soup.find("div", {"class": "card"})
+    cards = cards_pai.findAll('a')
+
+    links = []
+    for card in cards:
+        link = card['href']
+        links.append(link)
+
+    return links
+
+
 
 resposta = buscar(URL)
 if resposta:
     soup = parsing(resposta)
+    if soup:
+        links = encontrar_links(soup)
+        print(links)
