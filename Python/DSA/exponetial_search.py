@@ -1,4 +1,7 @@
-def binary_seacrh(nums, n, lo, hi):
+def binary_seacrh(nums, n, lo=0, hi=None):
+    if hi is None:
+        hi = len(nums) - 1
+
     while lo < hi:
         mid = int((lo + hi) / 2)
 
