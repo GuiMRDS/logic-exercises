@@ -70,3 +70,16 @@ class DoublyLinkedList:
 
 
 
+dll = DoublyLinkedList()
+
+dll.add_to_end(10)
+dll.add_to_end(20)
+dll.add_to_end(30)
+
+dll.add_to_front(5)
+
+print(dll.remove_from_front())  # 5
+print(dll.remove_from_end())    # 30
+
+dll.add_to_end(40)
+dll.add_to_front(1)
