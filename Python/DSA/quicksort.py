@@ -1,26 +1,14 @@
 def quicksort(arr, left, right):
-
-    if left < right:
-        print(arr[left:right])
-        pi = partition(arr, left, right)
-        quicksort(arr, left, pi-1)
-        quicksort(arr, pi+1, right)
-
-
-
-def partition(arr, left, right):
-    pivot = arr[right]
-
-    i = left - 1
-
-    for j in range(left, right):
-        if arr[j] <= pivot:
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]
-
-        arr[i+1], arr[j] = arr[j], arr[i+1]
-    return i+1
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[0]
+        less_than_pivot = [x for x in arr[1:] if x <= pivot]
+        bigger_than_pivot = [x for x in arr[1:] if x > pivot]
+        return quicksort(less_than_pivot) + [pivot] + quicksort(bigger_than_pivot)
 
 arr = [0, 2, 2, 4, 7,8,9]
 
-quicksort(arr, 0, len(arr)-1)
+arr = quicksort(arr)
+
+print(arr)
