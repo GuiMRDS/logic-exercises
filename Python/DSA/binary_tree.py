@@ -40,17 +40,30 @@ class BinaryTree:
         else:
             return self.__seacrch_recursive(node.right, data)
 
+    def preorder_traversal(self):
+        result = []
+        self._preorder_recursive(self.root, result)
+        return result
+
+    def _preorder_recursive(self, node, result):
+        if node:
+            result.append(node.data)
+            self._preorder_recursive(node.left, result)
+            self._preorder_recursive(node.right, result)
+
+
+
+
 
 tree = BinaryTree()
-tree.insert(6)
-tree.insert(2)
-tree.insert(4)
-tree.insert(7)
 tree.insert(5)
 tree.insert(3)
-tree.insert(8)
-tree.insert(5)
-tree.insert(9)
+tree.insert(1)
+tree.insert(10)
+tree.insert(15)
+tree.insert(7)
 
-print("Search 4:", tree.search(4))
-print("Search 6:", tree.search(6))
+
+[5,3,1,10,7,15]
+
+print("pre traversal: ", tree.preorder_traversal())
