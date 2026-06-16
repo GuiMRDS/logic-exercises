@@ -63,6 +63,19 @@ class BinaryTree:
             self._inorder_recursive(node.right, result)
 
 
+    def postorder_recursive(self):
+        result = []
+        self._postorder_recursive(self.root, result)
+        return result
+
+    def _postorder_recursive(self, node, result):
+        if node:
+            self._postorder_recursive(node.left, result)
+
+            self._postorder_recursive(node.right, result)
+            result.append(node.data)
+
+
 
 tree = BinaryTree()
 tree.insert(5)
@@ -75,4 +88,4 @@ tree.insert(7)
 
 [5,3,1,10,7,15]
 
-print("inorder_recursive: ", tree.inorder_recursive())
+print("postorder_recursive: ", tree.postorder_recursive())
