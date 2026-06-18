@@ -1,3 +1,7 @@
+
+from collections import deque
+
+
 class  Node:
     def __init__(self, data) -> None:
         self.data = data
@@ -75,6 +79,26 @@ class BinaryTree:
             self._postorder_recursive(node.right, result)
             result.append(node.data)
 
+    def bfs(self, data):
+        if self.root is None:
+            return False
+
+        queue = deque()
+        queue.append(self.root)
+
+        while queue:
+            node = queue.popleft()
+            print(node.data)
+            if node.data == data:
+                return True
+
+            if node.left:
+                queue.append(node.left)
+
+            if node.right:
+                queue.append(node.right)
+
+            return False
 
 
 tree = BinaryTree()
@@ -88,4 +112,4 @@ tree.insert(7)
 
 [5,3,1,10,7,15]
 
-print("postorder_recursive: ", tree.postorder_recursive())
+print("bfs: ", tree.bfs(10))
