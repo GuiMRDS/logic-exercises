@@ -1,24 +1,46 @@
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+
 class Stack:
-    def __init__(self, max_lenght = 1000):
-        self.items = [0] * max_lenght
-        self.max_lenght = max_lenght
-        self.pointer = 0
+    def __init__(self):
+        self.top = None
+        self._size = 0
 
     def push(self, item):
-        self.items[self.pointer] = item
-        self.pointer += 1
+        new_node = Node(item)
+        new_node.next = self.top
+        self.top = new_node
+        self._size += 1
 
     def pop(self):
-        if not len(self.items):
+        if self.top is None:
             raise IndexError('pop from an empty stack')
 
-        return self.items.pop()
+        popped_node = self.top
+        self.top = popped_node.next
+        self._size -= 1
+        return popped_node.value
 
     def peek(self):
-        if not len(self.items):
+        if self.top is None:
             raise IndexError('pop from an empty stack')
 
-        return self.items[-1]
+        return self.top.value
 
     def size(self):
-        return len(self.items)
+        return self._size
+
+
+stack = Stack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
+print(stack.pop())
+print(stack.peek())
+print(stack.size())
+print(stack.pop())
+print(stack.pop())
