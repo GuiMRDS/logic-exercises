@@ -1,15 +1,12 @@
-palavra = "programacao"
+palavra = "Guilherme"
 
 def ContagemCaracteres(palavra):
-    quantidade = len(palavra)
+    q = len(palavra)
+    num = 0
 
-    for caracter in palavra:
-        for n in range(quantidade):
-            if n == caracter:
-                print(caracter, n)
-
-    return False
+    for i in range(q):
+        num = 1 + num
+        print(f"{palavra[i]}: ", num)
 
 
-
-print(ContagemCaracteres(palavra))
+ContagemCaracteres(palavra)
