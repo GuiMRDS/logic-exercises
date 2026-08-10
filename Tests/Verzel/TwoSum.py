@@ -17,6 +17,5 @@ def twoSum(nums, target):
 
     return False
 
-if __name__ == '__main__':
-    distances = twoSum(nums, target)
-    print(distances)
+
+print(twoSum(nums, target))
