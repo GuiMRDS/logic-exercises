@@ -3,11 +3,3 @@ target = 64
 
 # saida
 # 6
-
-def exponential_search(nums, target):
-    if nums[0] == target:
-        return 0
-    low = len(nums)
-    high = 1
-
-    while high <= low:
