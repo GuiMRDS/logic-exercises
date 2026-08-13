@@ -4,11 +4,22 @@ target = 15
 # saída
 # (2, 4)
 
-n = len(nums)
+def pairSum(nums, target):
+    left = 0
+    right = len(nums)-1
 
-for i in range(n):
-    for j in range(i+1, n):
-        if nums[i] + nums[j] == target:
-            print(i, j)
+    while left < right:
+        sum = nums[left] + nums[right]
 
+        if sum == target:
+            return [left, right]
 
+        if sum < target:
+            left += 1
+
+        if sum > target:
+            right -= 1
+
+    return None
+
+print(pairSum(nums, target))
