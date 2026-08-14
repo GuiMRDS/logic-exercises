@@ -6,19 +6,20 @@ target = 10
 
 
 def SomaElementos(array, target):
-    if not array:
-        return 0
+    left = 0
+    right = len(array) - 1
 
-    esquerda = 0
-    for direita in range(0, len(array)):
-        if array[direita] + array[esquerda] == target:
-            return array[esquerda], array[direita]
+    while left < right:
+        sum = array[left] + array[right]
 
-        elif array[direita] + array[esquerda] < target:
-            esquerda += 1
+        if sum == target:
+            return array[left], array[right]
+
+        elif sum > target:
+            right -= 1
 
         else:
-            direita -= 1
+            left += 1
 
     return False
 
