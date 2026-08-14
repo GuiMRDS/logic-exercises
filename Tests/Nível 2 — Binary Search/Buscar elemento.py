@@ -11,11 +11,17 @@ def buscar(array, target):
     esquerda = 0
     direta = len(array) - 1
 
-    while esquerda < direta:
-        if array[esquerda] == target:
-            return array[esquerda]
+    while esquerda <= direta:
+        meio = (esquerda + direta) // 2
 
-        esquerda += 1
+        if array[meio] == target:
+            return meio
+
+        elif array[meio] < target:
+            esquerda = meio + 1
+
+        else:
+            direta = meio - 1
 
     return -1
 
