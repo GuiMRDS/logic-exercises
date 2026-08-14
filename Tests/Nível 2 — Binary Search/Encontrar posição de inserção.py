@@ -4,17 +4,24 @@ target = 4
 # Saída:
 # 2
 
+
 def binary_search(array, target):
-    low = 0
-    high = len(array) - 1
+        esquerda = 0
+        direita = len(array) - 1
 
-    while low <= high:
-        if array[low] <= target and array[high] >= target:
-            return array[low] + 1
+        while esquerda <= direita:
+            meio = (esquerda + direita) // 2
 
-        low += 1
+            if array[meio] == target:
+                return meio
 
-    return -1
+            elif array[meio] < target:
+                esquerda = meio + 1
+
+            else:
+                direita = meio - 1
+
+        return esquerda
 
 
 print(binary_search(array, target))
