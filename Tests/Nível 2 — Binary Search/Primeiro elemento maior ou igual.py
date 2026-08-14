@@ -9,13 +9,17 @@ def elemento_binaria(array, target):
     esquerda = 0
     direita = len(array) - 1
 
-    while esquerda != direita:
-        if array[esquerda] >= target:
-            return array[esquerda]
+    while esquerda <= direita:
+        meio = (esquerda + direita) // 2
 
-        esquerda += 1
+        if array[meio] > target:
+            return array[meio]
 
-    return -1
+        elif array[meio] < target:
+            esquerda = meio + 1
+
+        else:
+            direita = meio + 1
 
 
 print(elemento_binaria(array, target))
