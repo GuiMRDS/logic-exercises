@@ -13,4 +13,12 @@ def ElementorMaiorOuIgual(array, target):
         mid = (left+right)//2
 
         if array[mid] >= target:
-            return mid
+            return array[mid]
+
+        else:
+            left = mid + 1
+
+    return -1
+
+
+print(ElementorMaiorOuIgual(array, target))
