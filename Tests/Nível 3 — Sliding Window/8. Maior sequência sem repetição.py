@@ -5,3 +5,4 @@ Entrada = "abcabcbb"
 
 
 def sliding_window(array):
+    pass
