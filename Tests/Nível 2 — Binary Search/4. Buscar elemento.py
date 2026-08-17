@@ -20,5 +20,7 @@ def buscar(entrada, target):
         else:
             left = mid + 1
 
+    return -1
+
 
 print(buscar(array, target))
