@@ -6,14 +6,25 @@ k = 3
 
 
 def SomaMaxima(array, k):
-    soma = sum(array[:k])
-    maior = soma
+    esquerda = 0
+    direita = 0
 
-    for direita in range(k, len(array)):
-        soma = soma - array[direita - k] + array[direita]
-        maior = max(maior, soma)
+    soma = 0
+    maior = 0
+
+    while direita < len(array):
+
+        soma += array[direita]
+
+        while direita - esquerda + 1 > k:
+            soma -= array[esquerda]
+            esquerda += 1
+
+        if direita - esquerda + 1 == k:
+            maior = max(maior, soma)
+
+        direita += 1
 
     return maior
-
 
 print(SomaMaxima(array, k))
