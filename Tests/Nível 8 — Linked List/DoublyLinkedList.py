@@ -65,4 +65,5 @@ dll.add_to_end(12)
 dll.remove_from_front()
 dll.remove_from_end()
 
-
+print(dll.head.value)
+print(dll.head.next.value)
