@@ -4,26 +4,26 @@ target = 80
 # Saída:
 # 6
 
-def binary_exponential_search(array, target, left, right):
-    while left<right:
-        mid = (left+right)//2
+def binary_search(array, target, low=0, high=None):
+    if high is None:
+        high = len(array) - 1
 
-        if array[mid]==target:
+    while low <= high:
+        mid = (low + high) // 2
+
+        if array[mid] == target:
             return mid
 
-        elif array[mid]<target:
-            left = mid+1
+        elif array[mid] > target:
+            high = mid - 1
 
         else:
-            right = mid-1
+            low = mid + 1
 
     return -1
 
 
 def exponential_search(array, target):
-    if array[0]==target:
-        return 0
-
     n = len(array)
     i = 1
 
@@ -33,5 +33,7 @@ def exponential_search(array, target):
     if array[i]==target:
         return i
 
-    return binary_exponential_search(array, target, i//2, min(i,n-1))
+    return binary_search(array, target, i//2, min(i,n-1))
 
+
+print(exponential_search(array, target))
