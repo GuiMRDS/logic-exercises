@@ -77,7 +77,23 @@ linked_list.add_to_tail(80)
 linked_list.add_to_tail(90)
 linked_list.add_to_tail(100)
 
+linked_list.remove_from_head(20)
+linked_list.remove_from_head(10)
+linked_list.remove_from_head(20)
+
+linked_list.remove_from_tail(100)
+
 print(linked_list.head.value)
 print(linked_list.head.next.value)
+print(linked_list.head.next.next.value)
+print(linked_list.head.next.next.next.value)
+print(linked_list.head.next.next.next.value)
+print(linked_list.head.next.next.next.next.value)
+
 print(linked_list.tail.value)
+print(linked_list.tail.prev.value)
+print(linked_list.tail.prev.prev.value)
+print(linked_list.tail.prev.prev.prev.value)
+print(linked_list.tail.prev.prev.prev.prev.value)
+
 
