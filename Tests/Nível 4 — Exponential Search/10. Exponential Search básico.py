@@ -4,4 +4,14 @@ target = 80
 # Saída:
 # 6
 
-e
+def exponential_search(array, target):
+    low = 0
+    high = len(array) - 1
+
+    while low <= high:
+        low *= 2
+
+    if low == target:
+        return low
+
+    return binary_seacrh()
