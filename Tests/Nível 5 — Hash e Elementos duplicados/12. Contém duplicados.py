@@ -7,8 +7,6 @@
 
 def hash(array):
     visto = set()
-    low = 0
-    high = len(array)-1
 
     for num in array:
         if num in visto:
