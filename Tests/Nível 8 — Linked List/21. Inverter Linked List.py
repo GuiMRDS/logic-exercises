@@ -63,37 +63,26 @@ class LinkedList:
 
         return removed_node
 
+    def reverseList(self, head):
+        new_list = None
+
+        while head:
+            new_node = head.next
+            head.next = new_list
+            new_list = new_node
+            head = new_list
+
+        return new_list
+
+
 
 linked_list = LinkedList()
+# 1 → 2 → 3 → 4 → 5
 
-linked_list.add_to_head(10)
-linked_list.add_to_head(20)
-linked_list.add_to_head(30)
-linked_list.add_to_head(40)
-linked_list.add_to_head(50)
-linked_list.add_to_tail(60)
-linked_list.add_to_tail(70)
-linked_list.add_to_tail(80)
-linked_list.add_to_tail(90)
-linked_list.add_to_tail(100)
+linked_list.add_to_head(1)
+linked_list.add_to_head(2)
+linked_list.add_to_head(3)
+linked_list.add_to_tail(4)
+linked_list.add_to_tail(5)
 
-linked_list.remove_from_head(20)
-linked_list.remove_from_head(10)
-linked_list.remove_from_head(20)
-
-linked_list.remove_from_tail(100)
-
-print(linked_list.head.value)
-print(linked_list.head.next.value)
-print(linked_list.head.next.next.value)
-print(linked_list.head.next.next.next.value)
-print(linked_list.head.next.next.next.value)
-print(linked_list.head.next.next.next.next.value)
-
-print(linked_list.tail.value)
-print(linked_list.tail.prev.value)
-print(linked_list.tail.prev.prev.value)
-print(linked_list.tail.prev.prev.prev.value)
-print(linked_list.tail.prev.prev.prev.prev.value)
-
-
+print()
