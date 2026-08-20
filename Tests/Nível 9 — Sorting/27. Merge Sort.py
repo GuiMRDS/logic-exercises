@@ -68,8 +68,10 @@ def printLinkedList(head):
 
 
 values = [38, 27, 43, 3, 9, 82, 10]
+
 print("Unsorted Linked List:", values)
 head = buildLinkedList(values)
 sorted_head = mergesort(head)
+
 print("Sorted Linked List:", end=" ")
 printLinkedList(sorted_head)
