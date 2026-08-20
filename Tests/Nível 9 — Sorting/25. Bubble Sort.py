@@ -3,13 +3,13 @@
 
 
 def bubble_sort(arr):
-    tamanho = len(arr)
+    size = len(arr)
 
-    for _ in arr:
+    for _ in range(size-1):
         print(arr)
-        for i in range(tamanho-1):
-            if arr[i] > arr[i+1]:
-                arr[i + 1], arr[i] = arr[i], arr[i + 1]
+        for index in range(size-1):
+            if arr[index] > arr[index+1]:
+                arr[index], arr[index+1] = arr[index+1], arr[index]
 
 
 
