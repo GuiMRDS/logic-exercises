@@ -6,20 +6,7 @@ target = 6
 
 
 def BinarySearch(array, target):
-    low = 0
-    high = len(array) - 1
 
-    while low <= high:
-        mid = (low + high) // 2
-
-        if array[mid] >= target:
-            return array[mid]
-
-        else:
-            low = mid + 1
-
-
-    return -1
 
 
 print(BinarySearch(array, target))
