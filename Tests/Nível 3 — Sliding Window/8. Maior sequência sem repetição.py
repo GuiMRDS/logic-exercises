@@ -1,4 +1,4 @@
-Entrada = abcabcbb
+Entrada = "abcabcbb"
 
 # Saída:
 # 3
