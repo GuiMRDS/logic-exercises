@@ -6,13 +6,13 @@
 
 
 def hash(array):
-    visto = set()
+    vistos = set()
 
     for num in array:
-        if num in visto:
+        if num in vistos:
             return True
 
-        visto.add(num)
+        vistos.add(num)
 
     return False
 
