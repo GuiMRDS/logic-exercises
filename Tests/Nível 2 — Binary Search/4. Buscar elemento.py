@@ -4,6 +4,7 @@ target = 7
 # Saída:
 # 3
 
+
 def BinarySearch(array, target):
     left = 0
     right = len(array) - 1
