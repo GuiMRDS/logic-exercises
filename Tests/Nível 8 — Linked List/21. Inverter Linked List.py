@@ -64,15 +64,16 @@ class LinkedList:
         return removed_node
 
     def reverseList(self, head):
-        new_list = None
+        prev = None
+        current = head
 
-        while head:
-            new_node = head.next
-            head.next = new_list
-            new_list = new_node
-            head = new_list
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
 
-        return new_list
+        return prev
 
 
 
@@ -85,4 +86,4 @@ linked_list.add_to_head(3)
 linked_list.add_to_tail(4)
 linked_list.add_to_tail(5)
 
-print()
+linked_list.reverseList()
