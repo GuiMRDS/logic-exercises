@@ -6,20 +6,7 @@
 
 
 def TwoPointer(arr):
-    left = 0
-    right = 1
-    size = len(arr)
 
-    while right < size:
-        if arr[left] == arr[right]:
-            arr[left] = arr[right]
-            left += 1
-            right += 1
-
-        left += 1
-        right += 1
-
-    return arr
 
 
 

@@ -6,14 +6,7 @@
 
 
 def TwoPointer(palavra):
-    left = 0
-    right = len(palavra)-1
 
-    while left < right:
-        if palavra[left] == palavra[right]:
-            return True
-
-        return False
 
 
 
