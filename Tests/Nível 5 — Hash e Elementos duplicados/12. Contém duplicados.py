@@ -6,6 +6,15 @@
 
 
 def hash(array):
+    vistos = set()
+
+    for num in array:
+        if num in vistos:
+            return True
+
+        vistos.add(num)
+
+    return False
 
 
 
