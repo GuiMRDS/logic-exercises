@@ -28,3 +28,44 @@ class LinkedList:
         self.head = new_node
 
     def add_to_tail(self, value):
+        new_node = Node(value)
+        new_node.next = self.tail
+
+        if self.tail:
+            self.tail.prev = new_node
+
+        else:
+            self.head = new_node
+
+        self.tail = new_node
+
+    def remove_from_head(self, value):
+        if not self.head:
+            return None
+
+        removed_node = self.head
+
+        self.head = self.head.next
+        if self.head:
+            self.head.prev = None
+
+        else:
+            self.head = None
+
+        return removed_node
+
+    def remove_from_tail(self, value):
+        if not self.tail:
+            return None
+
+        removed_node = self.tail
+
+        self.tail = self.tail.next
+        if self.tail:
+            self.tail.prev = None
+
+        else:
+            self.tail = None
+
+        return removed_node
+
