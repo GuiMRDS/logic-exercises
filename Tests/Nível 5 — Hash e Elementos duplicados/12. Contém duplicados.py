@@ -6,9 +6,15 @@
 
 
 def hash(array):
+    visto = set()
 
+    for num in array:
+        if num in visto:
+            return True
 
+        visto.add(num)
 
+    return False
 
 
 print(hash([1, 2, 3, 4]))
