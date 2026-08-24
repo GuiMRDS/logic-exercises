@@ -21,5 +21,22 @@ def SlidingWindow(array, target):
     return menor if menor != float("inf") else 0
 
 
+def SlidingWindow2(array, k):
+    left = 0
+    suma = 0
+    menor = float("inf")
+
+    for right in range(len(array)):
+        suma += array[right]
+
+        while suma >= target:
+            menor = min(menor, right - left + 1)
+            left -= array[left]
+            left += 1
+
+    return menor if menor != float("inf") else 0
+
+
 
 print(SlidingWindow(array, target))
+print(SlidingWindow2(array, target))
