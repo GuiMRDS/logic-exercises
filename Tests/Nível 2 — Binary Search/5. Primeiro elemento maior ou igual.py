@@ -18,6 +18,7 @@ def BinarySearch(array, target):
         else:
             left = mid + 1
 
+    return -1
 
 
 print(BinarySearch(array, target))
