@@ -3,7 +3,15 @@
 # true
 
 def containsDuplicate(nums):
+    visto = set()
 
+    for num in nums:
+        if num in visto:
+            return True
+
+        visto.add(num)
+
+    return False
 
 
 print(containsDuplicate([1,2,3,4,5]))
