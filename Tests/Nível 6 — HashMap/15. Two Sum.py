@@ -5,3 +5,23 @@ target = 9
 # [0, 1]
 
 
+def two_Sum_Hash(array, target):
+    left = 0
+    right = len(array) - 1
+
+    while left < right:
+        sum = array[left] + array[right]
+
+        if sum == target:
+            return [left, right]
+
+        elif sum < target:
+            left += 1
+
+        else:
+            right -= 1
+
+    return False
+
+
+print(two_Sum_Hash(array, target))
