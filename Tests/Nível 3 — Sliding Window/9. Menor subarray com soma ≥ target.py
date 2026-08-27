@@ -5,7 +5,7 @@ target = 7
 # 2
 
 def SlidingWindow(array, target):
-    esquerda = 0
+    left = 0
     soma = 0
     menor = float("inf")
 
@@ -13,30 +13,12 @@ def SlidingWindow(array, target):
         soma += array[direita]
 
         while soma >= target:
-            menor = min(menor, direita - esquerda + 1)
+            menor = min(menor, direita - left + 1)
 
-            soma -= array[esquerda]
-            esquerda += 1
-
-    return menor if menor != float("inf") else 0
-
-
-def SlidingWindow2(array, k):
-    left = 0
-    suma = 0
-    menor = float("inf")
-
-    for right in range(len(array)):
-        suma += array[right]
-
-        while suma >= target:
-            menor = min(menor, right - left + 1)
-            left -= array[left]
+            soma -= array[left]
             left += 1
 
     return menor if menor != float("inf") else 0
 
 
-
 print(SlidingWindow(array, target))
-print(SlidingWindow2(array, target))
