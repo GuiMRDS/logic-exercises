@@ -15,16 +15,4 @@ def SlidingWindow(array, k):
     return maior
 
 
-def SlidingWindow2(array, k):
-    soma = sum(array[:k])
-    maior = soma
-
-    for direta in range(k, len(array)):
-        soma = soma - array[direta - k] + array[direta]
-        maior = max(maior, soma)
-
-    return maior
-
-
 print(SlidingWindow(array, k))
-print(SlidingWindow2(array, k))
