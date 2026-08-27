@@ -6,21 +6,3 @@ target = 10
 # [2, 8]
 
 
-def TwoPointer(array, target):
-    left = 0
-    right = len(array)-1
-
-    while left < right:
-        soma = array[left] + array[right]
-
-        if soma == target:
-            return array[left], array[right]
-
-        elif soma < target:
-            left += 1
-
-        else:
-            right -= 1
-
-
-print(TwoPointer(array, target))
