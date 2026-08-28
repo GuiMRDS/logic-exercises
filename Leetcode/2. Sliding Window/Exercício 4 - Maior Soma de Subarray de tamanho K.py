@@ -5,15 +5,27 @@ k = 3
 # 9
 
 
-def SlidingWindow(array, k):
-    soma = sum(array[:k])
-    maior = soma
+def SlidingWindow(nums):
+    esquerda, direita = 0, 0
+    _max = 1
+    counter = {}
 
-    for direta in range(k, len(array)):
-        soma = soma - array[direta - k] + array[direta]
-        maior = max(maior, soma)
+    counter[nums[0]] = 1
 
-    return maior
+    while direita < len(nums) - 1:
+        direita += 1
+        if counter.get(nums[direita]):
+            counter[nums[direita]] += 1
+        else:
+            counter[nums[direita]] = 1
+
+        while counter[nums[direita]] == 3:
+            counter[nums[direita]] -= 1
+            esquerda += 1
+
+        _max = max(_max, direita-esquerda+1)
+
+    return _max
 
 
 
