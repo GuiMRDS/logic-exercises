@@ -1,24 +1,17 @@
-nums = [1,2,4,6,10]
-target = 8
+nums = [3,2,4]
+target = 6
 
 # Resposta:
 # [2,3]
 
 
 def TwoPointer(nums):
-    left, right = 0, len(nums)-1
+    n = len(nums)
 
-    while left <= right:
-        soma=nums[left] + nums[right]
-
-        if soma == target:
-            return [left, right]
-
-        elif soma < target:
-            left += 1
-
-        else:
-            right -= 1
+    for i in range(n):
+        for j in range(n):
+            if nums[i] + nums[j] == target:
+                return [nums[i], nums[j]]
 
     return None
 
