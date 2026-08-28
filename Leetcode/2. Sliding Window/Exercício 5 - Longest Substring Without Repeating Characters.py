@@ -3,26 +3,21 @@
 # Resposta:
 # 3
 
-def maximumLengthSubstring(self, s: str) -> int:
-    l, r = 0, 0
-    _max = 1
+def lengthOfLongestSubstring(s: str) -> int:
+    l = 0
+    ans = 0
     counter = {}
 
-    counter[s[0]] = 1
+    for r in range(len(s)):
+        counter[s[r]] = counter.get(s[r], 0) + 1
 
-    while r < len(s) - 1:
-        r += 1
-        if counter.get(s[r]):
-            counter[s[r]] += 1
-        else:
-            counter[s[r]] = 1
-
-        while counter[s[r]] == 3:
+        while counter[s[r]] > 1:
             counter[s[l]] -= 1
             l += 1
-        _max = max(_max, r - l + 1)
 
-    return _max
+        ans = max(ans, r - l + 1)
+
+    return ans
 
 
-print(maximumLengthSubstring("abcabcbb"))
+print(lengthOfLongestSubstring("abcabcbb"))
