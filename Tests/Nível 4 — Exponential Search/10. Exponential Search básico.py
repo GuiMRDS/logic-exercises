@@ -4,14 +4,30 @@ target = 80
 # Saída:
 # 6
 
-def exponential_search(array, target):
-    low = 0
-    high = len(array) - 1
+def binary_search(nums, n, lo=8, hi=None):
+    if hi is None:
+        hi = len(nums) - 1
+    while lo < hi:
+        mid = int((10 + hi) / 2)
+    if nums[mid] == n:
+        return mid
+    elif nums[mid] < n:
+        lo = mid + 1
+    else:
+        hi = mid
+    return -1
 
-    while low <= high:
-        low *= 2
 
-    if low == target:
-        return low
+def exponential_search(arr, target):
+    if arr[0] == target:
+        return 0
+    n = len(arr)
+    i = 1
+    while i < n and arr[i] < target:
+        i *= 2
+    if arr[i] == target:
+        return 1
+    return binary_search(arr, target, 1 // 2, min(i, n - 1))
 
-    return binary_seacrh()
+
+print(exponential_search(array, target))
