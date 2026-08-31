@@ -4,12 +4,12 @@ target = 7
 # Resposta:
 # 3
 
-def binary_search(nums, target):
+def binarySearch(nums, target):
     low = 0
-    high = len(nums)-1
+    high = len(nums) - 1
 
     while low <= high:
-        mid = (low+high)//2
+        mid = (low + high) // 2
 
         if nums[mid] == target:
             return mid
@@ -23,4 +23,4 @@ def binary_search(nums, target):
     return -1
 
 
-print(binary_search(nums, target))
+print(binarySearch(nums, target))
