@@ -6,7 +6,7 @@
 def hashSet(nums):
     visted = set()
 
-    for num in nums:
+    for num in nums:    
         if num in visted:
             return True
 
