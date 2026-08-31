@@ -1,27 +1,18 @@
 nums = [2,7,11,15]
-
 target = 9
 
 # Resposta:
 # [0,1]
 
 
-def containsDuplicate(nums):
-    left, right = 0, len(nums)-1
+def twoSum(nums, target):
+    n = len(nums)
 
-    while left < right:
-        sum = nums[left] + nums[right]
-
-        if sum == target:
-            return True
-
-        elif sum < target:
-            left += 1
-
-        else:
-            right -= 1
+    for i in range(n):
+        for j in range(n + 1, n):
+            if nums[i] + nums[j] == target:
+                return [i, j]
 
     return False
 
-
-print(containsDuplicate(nums))
+print(twoSum(nums, target))
