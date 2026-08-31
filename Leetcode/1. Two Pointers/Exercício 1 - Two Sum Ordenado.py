@@ -11,5 +11,4 @@ def twoSum(nums, target):
                 return [nums[i],nums[j]]
 
 
-
 print(twoSum(nums,target))
