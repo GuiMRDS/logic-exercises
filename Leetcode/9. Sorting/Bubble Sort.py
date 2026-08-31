@@ -1,13 +1,12 @@
-def bubble_sort(nums):
-    tamanho = len(nums)
+def bubble_sort(arr):
+    size = len(arr)
 
-    for _ in range(tamanho-1):
-        for i in range(tamanho-1):
-            if nums[i] > nums[i+1]:
-                nums[i],nums[i+1] = nums[i+1],nums[i]
+    for i in range(size):
+        for j in range(size - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
-    return nums
+    return arr
 
 
-print(bubble_sort([3,2,1]))
-print(bubble_sort([5,4,3,2,1]))
+print(bubble_sort([2,3,4,5,6,7,8,9]))
