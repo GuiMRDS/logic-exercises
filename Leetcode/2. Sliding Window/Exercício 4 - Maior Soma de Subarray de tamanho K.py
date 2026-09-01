@@ -5,28 +5,27 @@ k = 3
 # 9
 
 
-def SlidingWindow(nums):
-    esquerda, direita = 0, 0
-    _max = 1
-    counter = {}
+def sliding_window(nums, k):
+    esquerda = 0
+    direita = k - 1
 
-    counter[nums[0]] = 1
+    soma_atual = sum(nums[:k])
+    maior_soma = soma_atual
 
     while direita < len(nums) - 1:
         direita += 1
-        if counter.get(nums[direita]):
-            counter[nums[direita]] += 1
-        else:
-            counter[nums[direita]] = 1
 
-        while counter[nums[direita]] == 3:
-            counter[nums[direita]] -= 1
-            esquerda += 1
+        # Adiciona o novo elemento que entrou na janela
+        soma_atual += nums[direita]
 
-        _max = max(_max, direita-esquerda+1)
+        # Remove o elemento que saiu da janela
+        soma_atual -= nums[esquerda]
 
-    return _max
+        esquerda += 1
+
+        maior_soma = max(maior_soma, soma_atual)
+
+    return maior_soma
 
 
-
-print(SlidingWindow(nums, k))
+print(sliding_window(nums, k))
