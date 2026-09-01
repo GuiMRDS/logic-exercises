@@ -1,6 +1,4 @@
 # abcabcbb
-import collections
-
 
 # Resposta:
 # 3
