@@ -17,4 +17,18 @@ def maxSubarraySum(arr):
     return res
 
 
+def maxSubarraySum2(arr):
+    res = arr[0]
+    for i in range(len(arr)):
+        currSum = 0
+
+        for j in range(i, len(arr)):
+            currSum = currSum + arr[j]
+
+            res = max(res, currSum)
+
+    return res
+
+
 print(maxSubarraySum(array))
+print(maxSubarraySum2(array))
