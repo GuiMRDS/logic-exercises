@@ -3,10 +3,10 @@ array = [-2,1,-3,4,-1,2,1,-5,4]
 # Resposta:
 # 6
 
-def maxSubarraySum(arr):
+def kadaneSum(arr):
     res = arr[0]
 
-    for i in range(len(arr)):
+    for i in range(1, len(arr)):
         currSum = 0
 
         for j in range(i, len(arr)):
@@ -17,4 +17,4 @@ def maxSubarraySum(arr):
     return res
 
 
-print(maxSubarraySum(array))
+print(kadaneSum(array))
