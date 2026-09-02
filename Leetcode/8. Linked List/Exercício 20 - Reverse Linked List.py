@@ -8,4 +8,5 @@ class Solution:
             new_list = head
             head = next_node
 
+
         return new_list
