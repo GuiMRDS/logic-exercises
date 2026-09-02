@@ -3,21 +3,20 @@
 # Resposta:
 # 3
 
-
-def lengthOfLongestSubstring(s):
-    l = 0
+def lengthOfLongestSubstring(string):
+    left = 0
     ans = 0
     counter = {}
 
-    for r in range(len(s)):
-        counter[s[r]] = counter.get(s[r], 0) + 1
 
-        while counter[s[r]] > 1:
-            counter[s[r]] -= 1
-            l += 1
+    for right in range(len(string)):
+        counter[string[right]] = counter.get(string[right], 0) + 1
 
-        ans = max(ans, r - l + 1)
+        while counter[string[right]] > 1:
+            counter[string[right]] -= 1
+            left += 1
 
+        ans = max(ans, right - left + 1)
 
     return ans
 
