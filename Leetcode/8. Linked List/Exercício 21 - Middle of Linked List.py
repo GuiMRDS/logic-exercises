@@ -6,4 +6,5 @@ class Solution:
             ahead = ahead.next.next
             head = head.next
 
+
         return head
