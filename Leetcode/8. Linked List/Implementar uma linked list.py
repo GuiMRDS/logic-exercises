@@ -3,13 +3,12 @@
 
 
 class Node:
-    def __init__(self, value):
-        self.value = value
-        self.next = None
-        self.prev = None
+    def __init__(self, next, prev):
+        self.next = next
+        self.prev = prev
 
 
-class LinkedList:
+class linkedList:
     def __init__(self):
         self.head = None
         self.tail = None
@@ -29,17 +28,17 @@ class LinkedList:
 
     def add_to_tail(self, value):
         new_node = Node(value)
-        new_node.prev = self.tail
+        new_node.next = self.tail
 
         if self.tail:
-            self.tail.next = new_node
+            self.tail.prev = new_node
         else:
             self.head = new_node
 
         self.tail = new_node
 
 
-    def remove_from_head(self):
+    def remove_from_head(self, value):
         if not self.head:
             return None
 
@@ -49,12 +48,12 @@ class LinkedList:
         if self.head:
             self.head.prev = None
         else:
-            self.tail = None
+            self.head = None
 
         return removed_node
 
 
-    def remove_from_tail(self):
+    def remove_from_tail(self, value):
         if not self.tail:
             return None
 
@@ -67,4 +66,3 @@ class LinkedList:
             self.head = None
 
         return removed_node
-
