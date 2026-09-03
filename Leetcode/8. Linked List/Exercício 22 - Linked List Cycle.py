@@ -1,5 +1,8 @@
+from Python.DSA.Outros.MergeSoft import ListNode
+
+
 class Solution:
-    def Cycle(self, head: Optional[ListNode]) -> bool:
+    def LinkedCycle(self, head: ListNode) -> ListNode:
         slow = head
         fast = head
 
@@ -9,6 +12,5 @@ class Solution:
 
             if slow == fast:
                 return True
-
 
         return False
