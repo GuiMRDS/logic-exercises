@@ -3,11 +3,11 @@
 # Resposta:
 # 3
 
+
 def lengthOfLongestSubstring(string):
     left = 0
     ans = 0
     counter = {}
-
 
     for right in range(len(string)):
         counter[string[right]] = counter.get(string[right], 0) + 1
