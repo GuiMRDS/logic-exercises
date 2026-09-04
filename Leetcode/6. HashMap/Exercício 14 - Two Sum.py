@@ -5,7 +5,7 @@ target = 9
 # [0,1]
 
 
-def twoSumHashMap2(nums, target):
+def twoSumHashMap(nums, target):
     hashMap = {}
 
     for i in range(len(nums)):
