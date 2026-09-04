@@ -3,7 +3,6 @@ array = [-2,1,-3,4,-1,2,1,-5,4]
 # Resposta:
 # 6
 
-
 def algorithmKadaneSum(arr):
     res = arr[0]
 
