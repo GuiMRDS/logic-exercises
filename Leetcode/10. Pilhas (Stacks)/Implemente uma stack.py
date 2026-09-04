@@ -57,3 +57,56 @@ class StackPointer:
 
     def size(self):
         return self.pointer
+
+
+### LinkedList
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+
+class StackLinkedList:
+    def __init__(self):
+        self.top = None
+        self.size = 0
+
+
+    def push(self, item):
+        new_node = Node(item)
+        new_node.next = self.top
+        self.top = new_node
+        self._size = new_node
+
+
+    def pop(self):
+        if self.top is None:
+            raise IndexError("Emply Stack")
+
+        popped_node = self.top
+        self.top = self.top.next
+        self._size -= 1
+        return popped_node.value
+
+
+    def peek(self):
+        if self.top is None:
+            raise IndexError("Emply Stack")
+
+        return self.top.value
+
+
+    def size(self):
+        return self._size
+
+
+stack = Stack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+print(stack.pop())
+print(stack.peek())
+print(stack.size())
+print(stack.pop())
+print(stack.pop())
+print(stack.pop())
