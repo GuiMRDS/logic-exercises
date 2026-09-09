@@ -10,20 +10,6 @@ def twoSumHashMap(nums, target):
 
     for i in range(len(nums)):
         hashMap[nums[i]] = i
-        for i in range(len(nums)):
-            if target - nums[i] in hashMap:
-                return [hashMap[target - nums[i]], i]
-            else:
-                hashMap[nums[i]] = i
-
-    return False
-
-
-def twoSumHashMap2(nums, target):
-    hashMap = {}
-
-    for i in range(len(nums)):
-        hashMap[nums[i]] = i
 
         for j in range(len(nums)):
             if target - nums[j] in hashMap:
@@ -32,5 +18,6 @@ def twoSumHashMap2(nums, target):
                 hashMap[nums[j]] = i
 
     return False
+
 
 print(twoSumHashMap(nums, target))
