@@ -4,4 +4,5 @@
 # 2
 
 
-
+def MissingNumber(nums):
+        pass
