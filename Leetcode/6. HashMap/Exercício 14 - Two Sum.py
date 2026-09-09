@@ -5,18 +5,3 @@ target = 9
 # [0,1]
 
 
-def twoSumHashMap(nums, target):
-    hashMap = {}
-
-    for i in range(len(nums)):
-        hashMap[nums[i]] = i
-        for i in range(len(nums)):
-            if target - nums[i] in hashMap:
-                return [hashMap[target - nums[i]], i]
-            else:
-                hashMap[nums[i]] = i
-
-    return False
-
-
-print(twoSumHashMap(nums, target))
