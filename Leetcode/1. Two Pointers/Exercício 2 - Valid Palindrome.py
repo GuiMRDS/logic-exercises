@@ -6,7 +6,13 @@ def isPalindrome(frase):
     right = len(frase) - 1
 
     while left < right:
-        
+        if frase[left] == frase[right]:
+            return True
+
+        left = left + 1
+        right = right - 1
+
+    return False
 
 
 print(isPalindrome(frase))
