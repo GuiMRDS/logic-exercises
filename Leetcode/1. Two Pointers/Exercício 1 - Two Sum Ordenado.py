@@ -13,4 +13,20 @@ def TwoPointerBruteForce(nums, target):
     return False
 
 
+def TwoPointer(nums, target):
+    left = 0
+    right = len(nums)
+
+    while left < right:
+        if nums[left] + nums[right] == target:
+            return [i,j]
+        elif nums[left] < target:
+            left = left + 1
+        else:
+            right = right - 1
+
+    return False
+
+
+print(TwoPointerBruteForce(nums, target))
 print(TwoPointer(nums, target))

@@ -3,3 +3,5 @@ target = 6;
 
 // Resposta:
 // [2,3]
+
+function TwoPointer(params) {}
