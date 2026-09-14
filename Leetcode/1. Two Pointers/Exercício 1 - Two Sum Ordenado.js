@@ -5,7 +5,14 @@ target = 6;
 // [2,3]
 
 function TwoPointer(nums, target) {
-  for (let index = 0; index < array.length; index++) {
-    const element = array[index];
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] == target) {
+        return [i, j];
+      }
+    }
   }
+  return false;
 }
+
+console.log(TwoPointer(nums, target));
