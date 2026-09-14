@@ -1,18 +1,20 @@
-frase = "A man a plan a canal Panama"
-# true
+frase = "A man a plan a canal Panama";
+// True
 
-def isPalindrome(frase):
-    left = 0
-    right = len(frase) - 1
+function isValidPalidrome(frase) {
+  let left = 0;
+  let right = frase.length - 1;
 
-    while left < right:
-        if frase[left] == frase[right]:
-            return True
+  while (left < right) {
+    if (frase[left] == frase[right]) {
+      return true;
+    }
 
-        left = left + 1
-        right = right - 1
+    left++;
+    right--;
+  }
 
-    return False
+  return frase;
+}
 
-
-print(isPalindrome(frase))
+console.log(isValidPalidrome(frase));
