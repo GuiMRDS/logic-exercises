@@ -11,7 +11,6 @@ def TwoPointerBruteForce(nums, target):
                 return [i,j]
 
     return False
-    
 
 
 print(TwoPointerBruteForce(nums, target))
