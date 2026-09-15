@@ -5,7 +5,16 @@ function isValidPalidrome(frase) {
   left = 0;
   right = frase.length - 1;
 
-  while (left > right) {}
+  while (left < right) {
+    if (frase[left] == frase[right]) {
+      return true;
+    }
+
+    left++;
+    right--;
+  }
+
+  return false;
 }
 
 console.log(isValidPalidrome(frase));
