@@ -11,14 +11,12 @@ function BinarySeach(nums, target) {
   while (left < right) {
     let mid = (left + right) / 2;
 
-    if (mid == target) {
-      return mid;
-    }
+    if (mid == target) return [mid];
 
     if (mid > target) {
-      left++;
+      mid++;
     } else {
-      right++;
+      mid--;
     }
   }
 }
