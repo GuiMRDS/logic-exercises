@@ -1,0 +1,21 @@
+:root {
+  --primary-color: palegoldenrod;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: midnightblue;
+}
+
+.container {
+  max-width: 700px;
+  margin: 50px 20px;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
