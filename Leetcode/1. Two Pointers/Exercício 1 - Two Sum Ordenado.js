@@ -13,4 +13,3 @@ function TwoPointerBruteForce(nums, target) {
 }
 
 console.log(TwoPointerBruteForce(nums, target));
-console.log(TwoPointer(nums, target));
