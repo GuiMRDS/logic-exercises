@@ -16,13 +16,18 @@ Se o número digito for maior que 9, consideramos 0.
 Se o numero dígito for maior que 9, consideramos 0.
 */
 
-function ValidaCPF(cpfEnviado) {}
+function ValidaCPF(cpfEnviado) {
+  Object.defineProperty(this, "cpfLimpo", {
+    enumerable: true,
+    get: function () {
+      return cpfEnviado.replace(/\D+/g, "");
+    },
+  });
+}
 
-let cpf = "705.484.450-52";
-let cpfLimpo = cpf.replace(/\D+/g, "");
-cpfArray = Array.from(cpfLimpo);
+ValidaCPF.prototype.valida = function () {
+  return true;
+};
 
-console.log(
-  cpfArray.reduce((ac, val) => ac + Number(val)),
-  0,
-);
+const cpf = new ValidaCPF("705.484.450-52");
+console.log(cpf.cplLimpo);
