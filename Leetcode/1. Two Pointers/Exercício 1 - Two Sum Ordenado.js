@@ -14,22 +14,22 @@ function TwoPointerBruteForce(nums, target) {
 
 function TwoPointer(nums, target) {
   let left = 0;
-  let right = length.nums - 1;
+  let right = nums.length - 1;
 
   while (left < right) {
     let sum = nums[left] + nums[right];
 
-    if (sum == target) {
-      return [nums[left], nums[right]];
-    }
+    if (sum == target) return [left, right];
 
-    if (right < target) {
-      right--;
-    } else {
+    if (sum < target) {
       left++;
+    } else {
+      right--;
     }
   }
+
+  return false;
 }
 
 console.log(TwoPointerBruteForce(nums, target));
-console.log(TwoPointer(nums, target));
+console.log(TwoPointer([1, 2, 4, 6, 10], 8));
