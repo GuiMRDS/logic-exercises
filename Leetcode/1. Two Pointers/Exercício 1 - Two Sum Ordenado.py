@@ -23,13 +23,14 @@ def TwoPointer(nums, target):
         if sum == target:
             return nums[left], nums[right]
 
-        if nums[left] > nums[right]:
+        if sum < target:
             left = left + 1
 
         else:
             right = right - 1
 
+    return False
 
 
 print(TwoPointerBruteForce(nums, target))
-print(TwoPointer(nums, target))
+print(TwoPointer([1, 2, 4, 6, 10], 8))
