@@ -1,5 +1,5 @@
 :root {
-  --primary-color: palegoldenrod;
+  --primary-color: cadetblue;
 }
 
 * {
@@ -8,14 +8,15 @@
 }
 
 body {
-  background: midnightblue;
+  background: cadetblue;
 }
 
 .container {
   max-width: 700px;
-  margin: 50px 20px;
+  margin: auto;
   background: #fff;
   padding: 20px;
+  border: auto;
   margin-bottom: 10px;
-  border-radius: 20px;
+  border-radius: 15px;
 }
