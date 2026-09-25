@@ -63,3 +63,14 @@ class MinHeap:
 
     def is_empty(self):
         return len(self.heap) == 0
+
+
+min_heap = MinHeap()
+min_heap.insert(0)
+min_heap.insert(1)
+min_heap.insert(2)
+min_heap.insert(3)
+min_heap.insert(4)
+min_heap.insert(5)
+min_heap.insert(0)
+min_heap.insert(0)
