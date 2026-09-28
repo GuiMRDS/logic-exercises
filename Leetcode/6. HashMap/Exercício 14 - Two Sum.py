@@ -17,5 +17,13 @@ def twoSumHash(nums, target):
 
     return False
 
+def twoSum(self, nums: list[int], target: int) -> list[int]:
+        hash = {}
+
+        for idx, i in enumerate(nums):
+            if hash.get(i) is not None:
+                return [hash.get(i), idx]
+            hash[target-i] = idx
+
 
 print(twoSumHash(nums, target))
