@@ -5,7 +5,23 @@ target = 7
 # 3
 
 
+def BinarySearch(nums, target):
+    left = 0
+    right = len(nums)-1
 
+    while(left < right):
+        mid = (left + right) // 2
+
+        if mid == target:
+            return mid
+
+        elif mid < target:
+            mid = mid - 1
+
+        else:
+            mid = mid + 1
+
+    return False
 
 
 
