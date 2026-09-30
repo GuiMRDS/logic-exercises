@@ -4,14 +4,14 @@
 function HashSet(array) {
   let visto = new Set();
 
-  for (let i = 0; i < array.length; i++) {
-    if (visto in array) {
+  for (const num of array) {
+    if (visto.has(num)) {
       return true;
     }
 
-    visto.add(i);
+    visto.add(num);
   }
-
+  
   return false;
 }
 
