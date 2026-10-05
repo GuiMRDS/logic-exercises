@@ -1,0 +1,9 @@
+{
+  "estoque": [
+    {
+      "codigoProduto": 101,
+      "descricaoProduto": "Caneta",
+      "estoque": 150
+    }
+  ]
+}

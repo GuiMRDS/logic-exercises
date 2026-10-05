@@ -1,0 +1,7 @@
+{
+  "vendas": [
+    { "vendedor": "João", "valor": 1000 },
+    { "vendedor": "Maria", "valor": 300 },
+    { "vendedor": "João", "valor": 80 }
+  ]
+}
