@@ -14,14 +14,13 @@
 import dados from "./dados.json" with { type: "json" };
 
 for (let i = 0; i < dados.vendas.length; i++) {
-
-  const valor = dados.vendas[i].valor;
   const vendedor = dados.vendas[i].vendedor;
+  const valor = dados.vendas[i].valor;
   let comissao = 0;
 
   if (valor >= 500) {
     comissao = valor * 0.05;
-  } else if (valor < 500 && valor >= 100) {
+  } else if (valor < 500 && valor > 100) {
     comissao = valor * 0.01;
   } else {
     comissao = 0;
