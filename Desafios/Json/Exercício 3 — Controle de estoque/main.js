@@ -14,18 +14,25 @@ import dados from "./dados.json" with { type: "json" };
 
 const movimentacao = {
   id: 1,
-  descricao: dados.estoque[0].descricaoProduto,
-  codigoProduto: dados.estoque[0].codigoProduto,
-  quantidade: dados.estoque[0].estoque,
+  descricao: "Venda",
+  codigoProduto: 101,
+  quantidade: 20,
   tipo: "saida",
 };
 
-if (dados.estoque.codigoProduto === movimentacao.codigoProduto) {
-  if (movimentacao.tipo === "entrada") {
-    dados.estoque[0].estoque = -1;
+let estoqueAnterior = dados.estoque[0].estoque;
+let estoqueFinal = dados.estoque[0].estoque;
+
+if (movimentacao.codigoProduto == dados.estoque[0].codigoProduto) {
+  if (movimentacao.tipo == "saida") {
+    estoqueFinal = estoqueAnterior - movimentacao.quantidade;
   } else {
-    dados.estoque[0].estoque = +1;
+    estoqueFinal = estoqueAnterior + movimentacao.quantidade;
   }
 }
 
-console.log(movimentacao);
+console.log(`
+  Produto: ${dados.estoque[0].descricaoProduto}
+  Estoque anterior: ${estoqueAnterior}
+  Estoque final: ${estoqueFinal}
+  `);
