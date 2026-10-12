@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 mongoose
-  .connect(process.env.CONNECTIONSTRING, {
+  .connect(process.env.CONNECTIONSSTRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -40,6 +40,7 @@ const sessionOptions = session({
     httpOnly: true,
   },
 });
+
 app.use(sessionOptions);
 app.use(flash());
 
