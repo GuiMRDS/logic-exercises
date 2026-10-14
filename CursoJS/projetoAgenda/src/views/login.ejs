@@ -26,14 +26,15 @@
               <input type="password" class="form-control" name="password" />
             </div>
 
-            <button type="submit" class="btn btn-primary">Entrar</button>
+            <button type="submit" class="btn btn-primary">Criar Conta</button>
           </form>
         </div>
         <div class="col-lg">
           <h4>Entra no sistema</h4>
           <p>Se você ainda não tem conta, faça login abaixo</p>
 
-          <form action="/login/login" method="post">
+          <form action="/login/login" method="POST">
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
             <div class="form-group">
               <label>Seu E-mail</label>
               <input type="email" class="form-control" name="email" />
@@ -43,7 +44,7 @@
               <input type="password" class="form-control" name="password" />
             </div>
 
-            <button type="submit" class="btn btn-primary">Criar Conta</button>
+            <button type="submit" class="btn btn-primary">Entrar</button>
           </form>
         </div>
       </div>
