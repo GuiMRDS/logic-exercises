@@ -26,7 +26,12 @@ const {
   csrfMiddleware,
 } = require("./src/middlewares/middleware");
 
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: false, 
+    hsts: false, 
+  }),
+);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
